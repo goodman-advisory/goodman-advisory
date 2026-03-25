@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Sustainability Metrics Actually Matter to Today's Fashion Consumers and Investors? | Woodlane Advisory</title>
+    <meta name="description" content="Which KPIs to track, what to put in your annual report, and how to avoid drowning in ESG data that nobody uses. A practical guide for mid-market fashion brands.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #F5F0E8;
+            --dark-olive: #2C3A2E;
+            --sage: #7A8F7E;
+            --gold: #B8956A;
+            --warm-white: #FDFBF7;
+            --text-primary: #2C3A2E;
+            --text-secondary: #5A6B5E;
+            --border-light: #E2DDD4;
+            --sage-light: #EEF2EF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--warm-white);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 48px;
+            background: var(--warm-white);
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark-olive);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--dark-olive);
+        }
+
+        .hero {
+            background: var(--cream);
+            padding: 80px 48px 72px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .hero-inner {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .hero-breadcrumb {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--sage);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 24px;
+        }
+
+        .hero-breadcrumb a {
+            color: var(--sage);
+            text-decoration: none;
+        }
+
+        .hero-breadcrumb a:hover {
+            color: var(--dark-olive);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 1.25;
+            color: var(--dark-olive);
+            margin-bottom: 24px;
+        }
+
+        .hero-meta {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .hero-meta span {
+            margin-right: 16px;
+        }
+
+        .article-container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 56px 48px 80px;
+        }
+
+        .article-container p {
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .article-container h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--dark-olive);
+            margin-top: 56px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .article-container h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark-olive);
+            margin-top: 40px;
+            margin-bottom: 12px;
+        }
+
+        .article-container strong {
+            font-weight: 600;
+            color: var(--dark-olive);
+        }
+
+        .article-container a {
+            color: var(--gold);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .article-container a:hover {
+            color: var(--dark-olive);
+        }
+
+        .callout {
+            background: var(--sage-light);
+            border-left: 3px solid var(--sage);
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            font-size: 16px;
+            color: var(--text-primary);
+        }
+
+        .callout p + p {
+            margin-top: 12px;
+        }
+
+        .reg-card {
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            padding: 28px 32px;
+            margin: 28px 0;
+            background: var(--warm-white);
+        }
+
+        .reg-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .reg-card h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark-olive);
+        }
+
+        .reg-card .status {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 4px 10px;
+            border-radius: 3px;
+        }
+
+        .status-active {
+            background: #E8F0E9;
+            color: #3A6B3E;
+        }
+
+        .status-pending {
+            background: #FFF3E0;
+            color: #8B6914;
+        }
+
+        .reg-card p {
+            font-size: 15.5px;
+            margin-bottom: 12px;
+        }
+
+        .reg-card .reg-detail {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .reg-card .reg-detail strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            font-size: 15px;
+        }
+
+        .timeline-table th {
+            font-weight: 600;
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 2px solid var(--dark-olive);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+        }
+
+        .timeline-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: top;
+        }
+
+        .timeline-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .year-highlight {
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        .intro {
+            font-size: 19px;
+            line-height: 1.75;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .article-cta {
+            background: var(--cream);
+            border-radius: 6px;
+            padding: 40px 36px;
+            margin: 56px 0 0;
+            text-align: center;
+        }
+
+        .article-cta h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--dark-olive);
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .article-cta p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--warm-white);
+            background: var(--dark-olive);
+            padding: 14px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #3D4E3F;
+            color: var(--warm-white);
+        }
+
+        footer {
+            border-top: 1px solid var(--border-light);
+            padding: 40px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark-olive);
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: var(--dark-olive);
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 20px 24px; }
+            .nav-links { display: none; }
+            .hero { padding: 56px 24px 48px; }
+            .hero h1 { font-size: 30px; }
+            .article-container { padding: 40px 24px 60px; }
+            .article-container h2 { font-size: 24px; }
+            .reg-card { padding: 20px 24px; }
+            .timeline-table { font-size: 14px; }
+            .timeline-table th, .timeline-table td { padding: 10px 10px; }
+            footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="https://woodlaneadvisory.com" class="nav-logo">Woodlane Advisory</a>
+        <ul class="nav-links">
+            <li><a href="https://woodlaneadvisory.com/#services">Services</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="https://woodlaneadvisory.com/#about">About</a></li>
+            <li><a href="https://woodlaneadvisory.com/#contact">Get in Touch</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-breadcrumb">
+                <a href="https://woodlaneadvisory.com">Home</a> &nbsp;/&nbsp; <a href="/resources">Resources</a> &nbsp;/&nbsp; Metrics &amp; Reporting
+            </div>
+            <h1>What Sustainability Metrics Actually Matter to Today's Fashion Consumers and Investors?</h1>
+            <div class="hero-meta">
+                <span>Woodlane Advisory</span>
+                <span>Updated March 2026</span>
+                <span>14 min read</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <article class="article-container">
+
+        <p class="intro">
+            The sustainability metrics landscape for fashion brands is overwhelmingly crowded. Between CSRD, ESRS, GRI, SASB, ISSB, CDP, SBTi, and a dozen other acronyms, it is easy to conclude that you need to track everything. You do not. You need to track the right things, for the right audiences, with data you can actually collect. This guide explains which metrics matter, to whom, and how to build a measurement framework that is useful rather than performative.
+        </p>
+
+        <p>
+            There are two fundamental problems with how most fashion brands approach sustainability metrics. First, they try to track too many things at once, which means nothing gets measured well. Second, they track what is easiest to measure rather than what is most material to their business. The result is a spreadsheet full of data points that do not drive decisions, do not satisfy investors, and do not resonate with consumers.
+        </p>
+
+        <p>
+            The solution is to start from the audiences that actually need your sustainability data and work backwards to the metrics that matter to each one. For a mid-market fashion brand, there are three audiences: consumers and retail partners, investors and acquirers, and regulators.
+        </p>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>What Consumers and Retail Partners Actually Care About</h2>
+
+        <p>
+            Consumer surveys consistently report that shoppers "care about sustainability." The data on purchasing behaviour tells a more nuanced story. Most consumers will not pay a significant premium for sustainability alone. What they will do is use sustainability as a tiebreaker between otherwise comparable products, and they will penalise brands that are caught making false or misleading claims.
+        </p>
+
+        <p>
+            Retail partners care differently. Nordstrom, Net-a-Porter, Selfridges, Galeries Lafayette, and other major retailers have sustainability scorecards for their brand partners. They are not asking for Scope 3 emissions data broken down by GHG Protocol category. They are asking for specific, verifiable information about materials, supply chain practices, and environmental claims.
+        </p>
+
+        <h3>The metrics that matter to this audience</h3>
+
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>Certified Material Percentage</h4>
+                <span class="status status-active">High Priority</span>
+            </div>
+            <p>
+                The percentage of your total material volume (by weight) that carries a recognised third-party certification: GOTS for organic, GRS for recycled, FSC for forest-derived fibres, OEKO-TEX for chemical safety. This is the single most useful metric for communicating material sustainability to consumers and retail partners because it is specific, verifiable, and hard to fake.
+            </p>
+            <p class="reg-detail"><strong>How to track it:</strong> Maintain a material inventory that records fibre type, certification status, and weight for every SKU. Aggregate to get your total certified percentage by weight. Update at least seasonally.</p>
+            <p class="reg-detail"><strong>What "good" looks like:</strong> There is no universal benchmark, but brands that can demonstrate consistent year-over-year improvement are in a strong position. Moving from 15% to 35% certified materials over two years tells a credible story. Claiming 100% without evidence does not.</p>
+        </div>
+
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>Supply Chain Traceability Depth</h4>
+                <span class="status status-active">High Priority</span>
+            </div>
+            <p>
+                How far down your supply chain you can identify and document your suppliers. Expressed as the percentage of your production volume for which you have visibility at each tier: Tier 1 (finished goods assembly), Tier 2 (fabric and component manufacturing), Tier 3 (raw material processing), and Tier 4 (raw material origin).
+            </p>
+            <p class="reg-detail"><strong>How to track it:</strong> Build a supplier map that documents the name, location, and function of each supplier at each tier. Calculate coverage as a percentage of your total production volume. Most brands start with 100% Tier 1 and work downward.</p>
+            <p class="reg-detail"><strong>What "good" looks like:</strong> 100% Tier 1 visibility is the baseline expectation. 50% or more Tier 2 visibility puts you ahead of most mid-market brands. Any Tier 3 or Tier 4 visibility is a differentiator.</p>
+        </div>
+
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>Substantiated Claims Ratio</h4>
+                <span class="status status-active">Urgent for 2026</span>
+            </div>
+            <p>
+                The percentage of environmental claims in your external communications (website, product labels, marketing materials) that are backed by specific, verifiable evidence. This is not a standard industry metric, but it should be. With the EU Green Transition Directive (ECGT) enforcing from September 2026, every environmental claim needs substantiation. Tracking this ratio is how you manage compliance.
+            </p>
+            <p class="reg-detail"><strong>How to track it:</strong> Conduct a claims audit. Catalogue every environmental claim in your external communications. For each claim, document the supporting evidence. Calculate the percentage that are fully substantiated.</p>
+            <p class="reg-detail"><strong>What "good" looks like:</strong> 100% substantiation is the legal requirement from September 2026 for brands selling in the EU. The target is not aspirational. It is mandatory.</p>
+        </div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>What Investors and Acquirers Actually Care About</h2>
+
+        <p>
+            The investor audience for sustainability data is evolving rapidly. In 2024 and 2025, many private equity firms treated ESG as a compliance checkbox. In 2026, the leading firms are treating it as an operational value creation lever. The metrics they want reflect that shift.
+        </p>
+
+        <p>
+            Private equity due diligence teams are not looking for a glossy sustainability report. They are looking for evidence that sustainability risks are identified, managed, and priced into the business plan. They want data that connects environmental and social performance to financial outcomes: revenue protection, cost reduction, and risk mitigation.
+        </p>
+
+        <h3>The metrics that matter to this audience</h3>
+
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>Greenhouse Gas Emissions (Scope 1, 2, and 3)</h4>
+                <span class="status status-active">High Priority</span>
+            </div>
+            <p>
+                Your total greenhouse gas emissions measured in metric tonnes of CO2 equivalent (tCO2e), broken down by scope. For fashion brands, Scope 3 (indirect emissions across the value chain) typically accounts for over 90% of the total, with raw material production and fabric manufacturing being the largest contributors.
+            </p>
+            <p class="reg-detail"><strong>How to track it:</strong> Scope 1 (direct emissions from owned facilities) and Scope 2 (purchased electricity) can be calculated from utility bills and fuel records. Scope 3 requires supplier data or, in the absence of primary data, spend-based estimates using industry emission factors. The GHG Protocol Corporate Value Chain (Scope 3) Standard provides the methodology.</p>
+            <p class="reg-detail"><strong>What investors want to see:</strong> A baseline emissions inventory, even if based on estimates. Year-over-year trend data showing the direction of travel. For brands pursuing science-based targets, an SBTi-validated near-term target. The quality of the data matters less than the fact that you have a documented, repeatable methodology and can show progress.</p>
+            <p class="reg-detail"><strong>What "good" looks like:</strong> Having a Scope 1, 2, and 3 inventory at all puts a mid-market fashion brand ahead of most peers. Having a reduction trajectory and a plan for improving data quality over time is what investors are looking for.</p>
+        </div>
+
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>Regulatory Exposure and Compliance Readiness</h4>
+                <span class="status status-active">High Priority</span>
+            </div>
+            <p>
+                A documented assessment of which sustainability regulations apply to your business, your current compliance status for each one, and your plan for closing any gaps. This is not a single number. It is a structured risk assessment.
+            </p>
+            <p class="reg-detail"><strong>What investors want to see:</strong> A clear mapping of CSRD, EUDR, ECGT, ESPR, EU Textile EPR, California SB 707, and any other applicable regulations against your business operations. For each regulation, a status assessment: compliant, partially compliant, or not yet compliant. For any gaps, a documented remediation plan with timelines.</p>
+            <p class="reg-detail"><strong>Why it matters for valuation:</strong> Undisclosed or unmanaged regulatory risk is a material finding in due diligence. It can delay a transaction, reduce the offer price, or result in specific indemnification requirements. A brand that can demonstrate proactive regulatory management de-risks the investment.</p>
+        </div>
+
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>Sustainability-Linked Revenue Exposure</h4>
+                <span class="status status-pending">Emerging Metric</span>
+            </div>
+            <p>
+                The percentage of your revenue that depends on customers, partners, or market access that have explicit sustainability requirements. If 40% of your wholesale revenue comes from retailers with sustainability scorecards, that is your sustainability-linked revenue exposure. If 25% of your EU revenue could be affected by EUDR non-compliance, that is also part of this metric.
+            </p>
+            <p class="reg-detail"><strong>How to track it:</strong> Map your revenue by customer and market. For each, identify whether there are sustainability prerequisites for continued business (retailer scorecards, regulatory compliance for market access, contractual sustainability clauses). Aggregate to get the total exposed revenue.</p>
+            <p class="reg-detail"><strong>Why it matters for valuation:</strong> This metric connects sustainability directly to the income statement. It answers the question investors actually care about: what revenue is at risk if sustainability requirements are not met?</p>
+        </div>
+
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>Supplier Audit Coverage and Non-Conformance Rate</h4>
+                <span class="status status-active">High Priority</span>
+            </div>
+            <p>
+                The percentage of your Tier 1 (and ideally Tier 2) suppliers that have been audited against a recognised social compliance standard (SMETA, BSCI, SA8000, WRAP) within the past 12 months. Combined with the non-conformance rate: the percentage of audited suppliers with open critical or major findings.
+            </p>
+            <p class="reg-detail"><strong>What investors want to see:</strong> High audit coverage (ideally 100% at Tier 1). A documented corrective action process for non-conformances. Evidence that critical findings are resolved within defined timelines. This is not about having a perfect supply chain. It is about having a managed one.</p>
+        </div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>What Regulators Require</h2>
+
+        <p>
+            Regulatory requirements are the third driver of sustainability metrics. Unlike consumer and investor metrics, these are not optional. If a regulation applies to your business, the metrics it requires are mandatory.
+        </p>
+
+        <p>
+            The good news is that most of the metrics regulators require overlap substantially with what investors and retail partners are already asking for. The bad news is that regulatory requirements tend to be more specific about methodology, scope, and assurance.
+        </p>
+
+        <table class="timeline-table">
+            <thead>
+                <tr>
+                    <th>Regulation</th>
+                    <th>Key Metrics Required</th>
+                    <th>Who It Applies To</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>CSRD / ESRS</strong></td>
+                    <td>GHG emissions (Scope 1, 2, 3), energy consumption, water use, waste generation, biodiversity impacts, workforce metrics, value chain due diligence, double materiality assessment</td>
+                    <td>Companies meeting EU size thresholds; non-EU companies with &euro;150M+ EU revenue</td>
+                </tr>
+                <tr>
+                    <td><strong>EUDR</strong></td>
+                    <td>Geolocation data for raw material origin, due diligence statements, deforestation-free verification for covered commodities</td>
+                    <td>Any company placing leather or other covered products on the EU market</td>
+                </tr>
+                <tr>
+                    <td><strong>ECGT</strong></td>
+                    <td>Substantiation evidence for all environmental claims; certification documentation for sustainability labels</td>
+                    <td>Any brand making environmental claims to EU consumers</td>
+                </tr>
+                <tr>
+                    <td><strong>EU Textile EPR</strong></td>
+                    <td>Material composition data, product weight, fibre blend ratios, recyclability assessment, volumes placed on market</td>
+                    <td>Any producer placing textiles on the EU market (by ~2028)</td>
+                </tr>
+                <tr>
+                    <td><strong>CA SB 707</strong></td>
+                    <td>PRO membership, product volumes sold in California, material composition</td>
+                    <td>Any producer selling apparel in California with &gt;$1M global revenue</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>Building a Practical Measurement Framework</h2>
+
+        <p>
+            The goal is not to measure everything. The goal is to measure the things that serve your three audiences (consumers and partners, investors, and regulators) with data you can actually collect and maintain over time. Here is how to build a framework that works for a mid-market fashion brand.
+        </p>
+
+        <h3>Step 1: Define your material issues</h3>
+
+        <p>
+            Not every sustainability topic is equally relevant to your business. A leather goods brand has different material issues than an activewear brand. Start by identifying the environmental and social topics that are most significant to your operations, your supply chain, and your stakeholders. This is what the CSRD calls a "double materiality assessment" and what common sense calls knowing what matters.
+        </p>
+
+        <p>
+            For most mid-market fashion brands, the material issues will include: greenhouse gas emissions (particularly Scope 3), material sourcing and certification, chemical management, waste and circularity, labour practices in the supply chain, and environmental claims substantiation.
+        </p>
+
+        <h3>Step 2: Select your core KPIs</h3>
+
+        <p>
+            Choose five to ten KPIs that cover your material issues and serve all three audiences. More than ten and you will struggle to maintain data quality. Fewer than five and you will have gaps. Here is a recommended starting set for a mid-market fashion brand.
+        </p>
+
+        <table class="timeline-table">
+            <thead>
+                <tr>
+                    <th>KPI</th>
+                    <th>Unit</th>
+                    <th>Primary Audience</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total GHG emissions (Scope 1, 2, 3)</td>
+                    <td>tCO2e</td>
+                    <td>Investors, regulators</td>
+                </tr>
+                <tr>
+                    <td>Emissions intensity (per unit or per $ revenue)</td>
+                    <td>tCO2e per unit or per $M</td>
+                    <td>Investors</td>
+                </tr>
+                <tr>
+                    <td>Certified material percentage (by weight)</td>
+                    <td>%</td>
+                    <td>Consumers, retail partners</td>
+                </tr>
+                <tr>
+                    <td>Supply chain traceability (by tier)</td>
+                    <td>% of volume at each tier</td>
+                    <td>All three audiences</td>
+                </tr>
+                <tr>
+                    <td>Tier 1 audit coverage</td>
+                    <td>% of suppliers audited</td>
+                    <td>Investors, regulators</td>
+                </tr>
+                <tr>
+                    <td>Critical non-conformance resolution rate</td>
+                    <td>% resolved within target</td>
+                    <td>Investors</td>
+                </tr>
+                <tr>
+                    <td>Waste diversion rate (production + unsold)</td>
+                    <td>% diverted from landfill</td>
+                    <td>Regulators, retail partners</td>
+                </tr>
+                <tr>
+                    <td>Substantiated claims ratio</td>
+                    <td>% of claims with evidence</td>
+                    <td>Regulators, risk management</td>
+                </tr>
+                <tr>
+                    <td>Sustainability-linked revenue exposure</td>
+                    <td>% of revenue</td>
+                    <td>Investors, board</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Step 3: Establish baselines and set targets</h3>
+
+        <p>
+            For each KPI, document your current performance (the baseline), even if it is based on estimates. Then set targets: where do you want to be in 12 months, 24 months, and 36 months? Targets should be ambitious enough to demonstrate progress but realistic enough that you can achieve them. A brand that sets a 50% emissions reduction target it cannot meet is in a worse position than one that targets 15% and delivers it.
+        </p>
+
+        <div class="callout">
+            <p>
+                <strong>On data quality:</strong> Do not let the pursuit of perfect data prevent you from starting. Estimated data, clearly labelled with your methodology and assumptions, is acceptable for a baseline. The important thing is that you document your methodology so you can measure consistently over time. Investors and regulators care about trend direction and methodological consistency more than they care about precision in year one.
+            </p>
+        </div>
+
+        <h3>Step 4: Build the data collection infrastructure</h3>
+
+        <p>
+            For most mid-market brands, a spreadsheet is a perfectly adequate tool for years one and two. You do not need ESG software to start tracking sustainability metrics. You need a structured template, a clear data collection process, defined data owners for each metric, and a review cadence (quarterly at minimum, monthly for operational metrics like waste).
+        </p>
+
+        <p>
+            As your measurement programme matures and your regulatory obligations increase, you may need to invest in dedicated ESG data management tools. But do not let the absence of technology prevent you from starting with what you have.
+        </p>
+
+        <h3>Step 5: Report to the right audiences in the right format</h3>
+
+        <p>
+            Different audiences need different outputs from the same underlying data.
+        </p>
+
+        <p>
+            <strong>For consumers and retail partners:</strong> Product-level information on your website and hangtags. Material certifications, supplier country of origin, specific environmental attributes (recycled content percentage, organic certification). Keep it factual and specific. Avoid aggregated metrics that consumers cannot connect to the products they are buying.
+        </p>
+
+        <p>
+            <strong>For investors and acquirers:</strong> A concise sustainability summary (two to five pages) that covers your material issues, core KPIs with trend data, regulatory compliance status, and strategic priorities. This should read like a business document, not a marketing brochure. Include methodology notes. Acknowledge data limitations. Investors respect transparency about what you do and do not know.
+        </p>
+
+        <p>
+            <strong>For regulators:</strong> Compliance-specific filings in the format required by each regulation. For CSRD, this means reporting against the applicable ESRS standards. For EUDR, due diligence statements. For EPR, product and material data submitted to the relevant PRO. The format is prescribed. Your job is to ensure the underlying data is available and accurate.
+        </p>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>The Metrics That Do Not Matter (Yet)</h2>
+
+        <p>
+            Not everything that can be measured should be measured. For a mid-market fashion brand in 2026, the following metrics are frequently discussed but are either premature, impractical, or not material enough to justify the investment in tracking them.
+        </p>
+
+        <p>
+            <strong>Biodiversity impact metrics.</strong> The science and methodology for measuring corporate biodiversity impact are still maturing. The Science Based Targets Network (SBTN) has published guidance, but application to fashion supply chains is complex and data-intensive. Track this space. Start collecting the underlying data (sourcing locations, land use context) if you can. But do not invest heavily in biodiversity KPIs until the methodology stabilises and regulatory requirements crystallise.
+        </p>
+
+        <p>
+            <strong>Water footprint per garment.</strong> Water is a material issue for fashion, but calculating a product-level water footprint requires primary data from farms and mills that most mid-market brands do not have access to. A more practical approach is to identify which of your sourcing regions are water-stressed and prioritise water stewardship in those supply chains.
+        </p>
+
+        <p>
+            <strong>Circular economy metrics (resale percentage, recycling rate).</strong> These are emerging metrics that will become important as EPR schemes mature and circular business models scale. For most mid-market brands in 2026, the relevant action is to establish end-of-life partnerships (resale, recycling, donation) and track the volume of product diverted from landfill. Detailed circularity metrics can come later as the infrastructure develops.
+        </p>
+
+        <p>
+            <strong>Social Return on Investment (SROI).</strong> A theoretically appealing metric that attempts to assign a monetary value to social outcomes. In practice, the methodology is subjective, the results are difficult to verify, and few investors or regulators accept SROI calculations at face value. Focus on concrete social metrics (audit coverage, non-conformance rates, wage data) rather than aggregated impact valuations.
+        </p>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>The Bottom Line</h2>
+
+        <p>
+            Sustainability measurement for fashion brands is not about tracking the most metrics or producing the thickest report. It is about tracking the right metrics, for the right audiences, with data you can stand behind.
+        </p>
+
+        <p>
+            Start with five to ten core KPIs aligned to your material issues. Establish baselines, even imperfect ones. Set realistic targets. Build a simple data collection process. Report differently to consumers, investors, and regulators because they need different things.
+        </p>
+
+        <p>
+            The brands that win in this environment are not the ones with the most data. They are the ones that can translate their data into decisions: which suppliers to prioritise, which materials to phase in, which claims to revise, which risks to mitigate. Metrics are a tool, not an end in themselves. Use them to run your business better, and the reporting will take care of itself.
+        </p>
+
+        <!-- CTA -->
+        <div class="article-cta">
+            <h3>Need help building your metrics framework?</h3>
+            <p>
+                Woodlane Advisory helps fashion brands identify their material sustainability issues, select the right KPIs, and build practical measurement systems. Start with a conversation.
+            </p>
+            <a href="mailto:julia@woodlaneadvisory.com" class="cta-button">Book a Call</a>
+        </div>
+
+    </article>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="https://woodlaneadvisory.com" class="footer-logo">Woodlane Advisory</a>
+        <ul class="footer-links">
+            <li><a href="https://woodlaneadvisory.com/#services">Services</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="https://woodlaneadvisory.com/#about">About</a></li>
+            <li><a href="https://www.linkedin.com/company/woodlane-advisory" target="_blank">LinkedIn</a></li>
+        </ul>
+        <span>&copy; 2026 woodlaneadvisory.com</span>
+    </footer>
+
+</body>
+</html>
