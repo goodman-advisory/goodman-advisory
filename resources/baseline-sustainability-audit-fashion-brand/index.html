@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Do You Conduct a Baseline Sustainability Audit for a Fashion Brand? | Woodlane Advisory</title>
+    <meta name="description" content="The first step before hiring a consultant or building a strategy. What to assess, how to structure the process, and what a useful baseline looks like for a mid-market fashion brand.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #F5F0E8;
+            --dark-olive: #2C3A2E;
+            --sage: #7A8F7E;
+            --gold: #B8956A;
+            --warm-white: #FDFBF7;
+            --text-primary: #2C3A2E;
+            --text-secondary: #5A6B5E;
+            --border-light: #E2DDD4;
+            --sage-light: #EEF2EF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--warm-white);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── NAV ── */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 48px;
+            background: var(--warm-white);
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark-olive);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--dark-olive);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: var(--cream);
+            padding: 80px 48px 72px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .hero-inner {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .hero-breadcrumb {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--sage);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 24px;
+        }
+
+        .hero-breadcrumb a {
+            color: var(--sage);
+            text-decoration: none;
+        }
+
+        .hero-breadcrumb a:hover {
+            color: var(--dark-olive);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 1.25;
+            color: var(--dark-olive);
+            margin-bottom: 24px;
+        }
+
+        .hero-meta {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .hero-meta span {
+            margin-right: 16px;
+        }
+
+        /* ── ARTICLE ── */
+        .article-container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 56px 48px 80px;
+        }
+
+        .article-container p {
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .article-container h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--dark-olive);
+            margin-top: 56px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .article-container h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark-olive);
+            margin-top: 40px;
+            margin-bottom: 12px;
+        }
+
+        .article-container strong {
+            font-weight: 600;
+            color: var(--dark-olive);
+        }
+
+        .article-container a {
+            color: var(--gold);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .article-container a:hover {
+            color: var(--dark-olive);
+        }
+
+        /* Key stat callout */
+        .callout {
+            background: var(--sage-light);
+            border-left: 3px solid var(--sage);
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            font-size: 16px;
+            color: var(--text-primary);
+        }
+
+        .callout p + p {
+            margin-top: 12px;
+        }
+
+        /* Regulation summary cards */
+        .reg-card {
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            padding: 28px 32px;
+            margin: 28px 0;
+            background: var(--warm-white);
+        }
+
+        .reg-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .reg-card h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark-olive);
+        }
+
+        .reg-card .status {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 4px 10px;
+            border-radius: 3px;
+        }
+
+        .status-active {
+            background: #E8F0E9;
+            color: #3A6B3E;
+        }
+
+        .status-pending {
+            background: #FFF3E0;
+            color: #8B6914;
+        }
+
+        .status-stalled {
+            background: #F0ECEC;
+            color: #7A6B6B;
+        }
+
+        .reg-card p {
+            font-size: 15.5px;
+            margin-bottom: 12px;
+        }
+
+        .reg-card .reg-detail {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .reg-card .reg-detail strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Table */
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            font-size: 15px;
+        }
+
+        .timeline-table th {
+            font-weight: 600;
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 2px solid var(--dark-olive);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+        }
+
+        .timeline-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: top;
+        }
+
+        .timeline-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .year-highlight {
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        /* Intro paragraph */
+        .intro {
+            font-size: 19px;
+            line-height: 1.75;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        /* CTA section */
+        .article-cta {
+            background: var(--cream);
+            border-radius: 6px;
+            padding: 40px 36px;
+            margin: 56px 0 0;
+            text-align: center;
+        }
+
+        .article-cta h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--dark-olive);
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .article-cta p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--warm-white);
+            background: var(--dark-olive);
+            padding: 14px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #3D4E3F;
+            color: var(--warm-white);
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--border-light);
+            padding: 40px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark-olive);
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: var(--dark-olive);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px 24px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 56px 24px 48px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .article-container {
+                padding: 40px 24px 60px;
+            }
+
+            .article-container h2 {
+                font-size: 24px;
+            }
+
+            .reg-card {
+                padding: 20px 24px;
+            }
+
+            .timeline-table {
+                font-size: 14px;
+            }
+
+            .timeline-table th,
+            .timeline-table td {
+                padding: 10px 10px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="https://woodlaneadvisory.com" class="nav-logo">Woodlane Advisory</a>
+        <ul class="nav-links">
+            <li><a href="https://woodlaneadvisory.com/#services">Services</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="https://woodlaneadvisory.com/#about">About</a></li>
+            <li><a href="https://woodlaneadvisory.com/#contact">Get in Touch</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-breadcrumb">
+                <a href="https://woodlaneadvisory.com">Home</a> &nbsp;/&nbsp; <a href="/resources">Resources</a> &nbsp;/&nbsp; Operations
+            </div>
+            <h1>How Do You Conduct a Baseline Sustainability Audit for a Fashion Brand?</h1>
+            <div class="hero-meta">
+                <span>Woodlane Advisory</span>
+                <span>Updated March 2026</span>
+                <span>14 min read</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <article class="article-container">
+
+        <p class="intro">
+            Before you hire a sustainability consultant, set targets, or publish a strategy, you need to know where you stand. A baseline audit is the process of documenting what your brand currently does, what it currently knows, and what it currently cannot answer about its environmental and social impact. It is the foundation everything else is built on.
+        </p>
+
+        <p>
+            Most fashion brands skip this step. They jump straight to setting emissions targets or launching a "conscious" collection, without first understanding what data they have, what data they are missing, and where the real risks sit. The result is a sustainability programme built on assumptions rather than evidence.
+        </p>
+
+        <p>
+            A good baseline audit does not require a six-figure consultancy engagement. It does require someone with the time, access, and analytical discipline to ask the right questions across every relevant function of the business. This guide explains what that process looks like for a fashion brand doing between $5 million and $200 million in revenue.
+        </p>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>What a Baseline Audit Is (and What It Is Not)</h2>
+
+        <p>
+            A baseline sustainability audit is a structured assessment of where your brand stands today across environmental, social, and governance dimensions. It produces a documented picture of your current operations, supply chain, materials, claims, and data infrastructure.
+        </p>
+
+        <p>
+            It is not a certification process. It is not a carbon footprint calculation (though it will tell you whether you have the data to do one). It is not a strategy document, though it directly informs one. Think of it as a diagnostic. Before you can build a plan, you need to understand the patient.
+        </p>
+
+        <div class="callout">
+            <p>
+                <strong>The most common mistake:</strong> Brands treat a baseline audit as an exercise in collecting numbers. The numbers matter, but the gaps matter more. The most useful output of a baseline audit is a clear picture of what you do not yet know and what data you cannot yet produce. That is what tells you where to invest first.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>The Six Areas to Assess</h2>
+
+        <p>
+            A comprehensive baseline audit for a fashion brand covers six areas. Not every brand will have the same level of complexity in each area, but every brand needs to examine all six. The goal is not to produce a perfect score in each category. The goal is to produce an honest assessment that identifies where your risks, gaps, and opportunities sit.
+        </p>
+
+        <!-- Area 1 -->
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>1. Supply Chain Mapping and Visibility</h4>
+            </div>
+            <p>
+                This is the single most important area for most fashion brands, and the one where the biggest gaps tend to appear. You need to document, at a minimum, your Tier 1 suppliers (the factories that assemble your finished products) and your Tier 2 suppliers (the mills, tanneries, and component manufacturers that produce your fabrics and materials).
+            </p>
+            <p class="reg-detail"><strong>Key questions:</strong> Can you name every Tier 1 factory? Do you have addresses, not just country names? Can you identify your Tier 2 suppliers for your highest-volume materials? Do you know the origin country of your raw materials (cotton, leather, wool, synthetics)?</p>
+            <p class="reg-detail"><strong>What "good" looks like:</strong> Full Tier 1 visibility with factory names, locations, and audit status. At least partial Tier 2 visibility for top five materials by volume. A documented process for onboarding new suppliers that includes sustainability criteria.</p>
+            <p class="reg-detail"><strong>Why it matters now:</strong> The EUDR requires origin traceability for leather. CSRD-reporting wholesale partners are requesting supply chain data from brand partners. The EU Textile EPR will require material composition data for eco-modulated fees. Without supply chain visibility, you cannot comply with any of these.</p>
+        </div>
+
+        <!-- Area 2 -->
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>2. Materials Profile</h4>
+            </div>
+            <p>
+                Document every material in your product range by type, volume, and source. This includes fibres (cotton, polyester, nylon, wool, silk, viscose, linen), trims (zippers, buttons, labels), and packaging materials. You need to know not just what you use, but how much of it you use and where it comes from.
+            </p>
+            <p class="reg-detail"><strong>Key questions:</strong> What percentage of your total material volume is each fibre type? How much of your cotton is conventional versus organic or recycled? Do you use any certified materials (GOTS, GRS, OEKO-TEX, FSC)? What is your blended-fibre ratio (mono-materials versus multi-fibre blends)?</p>
+            <p class="reg-detail"><strong>What "good" looks like:</strong> A material breakdown by weight or volume, updated at least annually. Certification documentation on file for any certified materials. A clear picture of your blended-fibre exposure, since blends are harder to recycle and will carry higher EPR fees.</p>
+            <p class="reg-detail"><strong>Why it matters now:</strong> Your material mix determines your regulatory exposure (EUDR for leather, EPR fees for blends), your emissions profile (synthetics versus natural fibres have very different carbon footprints), and your ability to substantiate marketing claims.</p>
+        </div>
+
+        <!-- Area 3 -->
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>3. Environmental Claims and Marketing</h4>
+            </div>
+            <p>
+                Audit every piece of external communication that references sustainability, the environment, climate, or social responsibility. This includes your website, product descriptions, hangtags, packaging, social media, press releases, wholesale line sheets, and investor materials.
+            </p>
+            <p class="reg-detail"><strong>Key questions:</strong> Do you use the words "sustainable," "eco-friendly," "green," "conscious," "carbon neutral," or "climate positive" anywhere? Can you substantiate each claim with specific, verifiable data? Are any claims based on carbon offsets? Do your sustainability labels reference a recognised certification scheme?</p>
+            <p class="reg-detail"><strong>What "good" looks like:</strong> A complete inventory of every environmental claim, with documentation of the evidence supporting each one. Claims that cannot be substantiated are flagged for revision or removal.</p>
+            <p class="reg-detail"><strong>Why it matters now:</strong> The EU Green Transition Directive (ECGT) takes effect in September 2026. Generic green claims and offset-based neutrality claims will be prohibited. Fines of up to 4% of annual turnover in the affected member state. This is not a future risk. It is a 2026 compliance obligation.</p>
+        </div>
+
+        <!-- Area 4 -->
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>4. Energy and Emissions Data</h4>
+            </div>
+            <p>
+                Assess what emissions data you currently have and what you would need to produce a credible greenhouse gas inventory. For most fashion brands, the vast majority of emissions sit in Scope 3, specifically in raw material production, fabric manufacturing, and finished goods assembly. Your direct operations (Scope 1 and 2) are typically a small fraction of the total.
+            </p>
+            <p class="reg-detail"><strong>Key questions:</strong> Do you track energy consumption at your own facilities (offices, warehouses, retail stores)? Have you ever calculated Scope 1 and 2 emissions? Do you have any data on Scope 3 emissions, even estimates? Do your suppliers report energy data or emissions data to you?</p>
+            <p class="reg-detail"><strong>What "good" looks like:</strong> Scope 1 and 2 data collected from utility bills and fuel records. At least an initial estimate of Scope 3 based on spend data or industry averages. A clear understanding of which Scope 3 categories are most material (for fashion, this is almost always Category 1: purchased goods and services).</p>
+            <p class="reg-detail"><strong>Why it matters now:</strong> Wholesale partners subject to CSRD will ask for supply chain emissions data. Private equity firms conducting ESG due diligence will want to see at least a baseline emissions estimate. Science-based target setting requires a complete Scope 1, 2, and 3 inventory.</p>
+        </div>
+
+        <!-- Area 5 -->
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>5. Waste and End-of-Life Practices</h4>
+            </div>
+            <p>
+                Document what happens to your products and materials at every stage where waste is generated: production waste (cutting room offcuts, defective units), unsold inventory, returns, and post-consumer product end of life.
+            </p>
+            <p class="reg-detail"><strong>Key questions:</strong> What is your production waste rate? What happens to unsold inventory? Do you destroy any product? Do you have a returns policy that results in product disposal? Do you offer any take-back, resale, or recycling programmes?</p>
+            <p class="reg-detail"><strong>What "good" looks like:</strong> A documented waste flow for each stage of the product lifecycle. No product destruction (or a clear plan to eliminate it before July 2026 if you sell in the EU). Partnerships or processes in place for resale, donation, or recycling of unsold and returned goods.</p>
+            <p class="reg-detail"><strong>Why it matters now:</strong> The ESPR bans destruction of unsold textiles for large enterprises from July 2026. California's SB 707 and EU Textile EPR both require documented end-of-life management. Retailers are increasingly asking brand partners about their waste and circularity practices.</p>
+        </div>
+
+        <!-- Area 6 -->
+        <div class="reg-card">
+            <div class="reg-card-header">
+                <h4>6. Social and Labour Practices</h4>
+            </div>
+            <p>
+                Assess your visibility into working conditions across your supply chain. This includes audit coverage, wage practices, working hours, health and safety standards, and your processes for identifying and addressing labour rights risks.
+            </p>
+            <p class="reg-detail"><strong>Key questions:</strong> What percentage of your Tier 1 factories have been audited in the past 12 months? What audit standard do you use (SMETA, BSCI, SA8000, WRAP)? Do you have visibility into wages at your supplier factories? How do you handle audit non-conformances?</p>
+            <p class="reg-detail"><strong>What "good" looks like:</strong> 100% Tier 1 audit coverage with a recognised standard. A documented corrective action process for non-conformances. At least partial visibility into Tier 2 working conditions for your highest-risk sourcing countries.</p>
+            <p class="reg-detail"><strong>Why it matters now:</strong> The EU Corporate Sustainability Due Diligence Directive (CSDDD) requires qualifying companies to identify and address human rights and environmental impacts in their value chains. Even if your brand falls below the threshold, your wholesale partners may require labour rights documentation from you. Investor due diligence increasingly includes social risk assessment.</p>
+        </div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>How to Structure the Process</h2>
+
+        <p>
+            A baseline audit for a mid-market fashion brand typically takes between four and eight weeks, depending on the complexity of your supply chain and the state of your existing data. Here is a practical framework for running the process.
+        </p>
+
+        <h3>Week 1: Scope and data collection plan</h3>
+
+        <p>
+            Define the boundaries of your audit. If you operate multiple brands or product categories, decide whether to audit the full portfolio or start with your largest brand. Identify who in your organisation holds the data you need: typically the sourcing or production team (supply chain data), the product development team (materials data), the marketing team (claims), the finance team (energy bills and spend data), and the operations team (waste and logistics).
+        </p>
+
+        <h3>Weeks 2 to 4: Data gathering</h3>
+
+        <p>
+            This is the most time-intensive phase. You are collecting supplier lists, material specifications, marketing assets, utility bills, waste records, audit reports, and certification documents. The most important thing at this stage is to document what you can find and what you cannot find. If your Tier 2 supplier data is incomplete, record that as a finding. If your marketing team cannot substantiate a claim, flag it. The gaps are findings.
+        </p>
+
+        <h3>Weeks 5 to 6: Analysis and gap identification</h3>
+
+        <p>
+            Synthesise the data into a structured assessment across all six areas. For each area, document what you know, what you do not know, what data you have, what data you are missing, and what the implications are for regulatory compliance, commercial relationships, and risk exposure.
+        </p>
+
+        <h3>Weeks 7 to 8: Baseline report and prioritisation</h3>
+
+        <p>
+            Produce a written baseline report that summarises the current state, identifies the gaps, and prioritises the actions needed. The prioritisation should be driven by three factors: regulatory deadlines (what is legally required soonest), commercial requirements (what your wholesale partners or investors are asking for), and level of effort (what can be addressed quickly versus what requires sustained investment).
+        </p>
+
+        <div class="callout">
+            <p>
+                <strong>Who should run the audit?</strong> Ideally, someone with cross-functional access and enough seniority to request data from multiple teams. This could be a sustainability lead, a COO, a head of operations, or an external advisor. The person does not need to be a sustainability specialist, but they do need to be analytically rigorous and comfortable asking uncomfortable questions about what the brand does and does not know.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>What a Useful Baseline Report Looks Like</h2>
+
+        <p>
+            A baseline report is not a glossy PDF for your website. It is an internal working document that serves as the foundation for your sustainability strategy. The best baseline reports share a few characteristics.
+        </p>
+
+        <p>
+            <strong>They are honest about gaps.</strong> If you do not have Tier 2 supplier data, the report says so. If your emissions estimate is based on industry averages rather than primary data, the report says so. The value of the baseline is in its accuracy, not in making the brand look good.
+        </p>
+
+        <p>
+            <strong>They are structured around risk and opportunity.</strong> For each area, the report should identify the regulatory, commercial, and reputational risks associated with the current state, and the opportunities that would come from addressing the gaps. This is what makes the report useful to a CEO or a board.
+        </p>
+
+        <p>
+            <strong>They include a prioritised action plan.</strong> Not a 50-item to-do list. A short list of the five to ten highest-priority actions, ranked by urgency and impact. For most mid-market fashion brands, the top priorities will be: audit and revise environmental claims (urgent, given September 2026 ECGT enforcement), build Tier 1 and Tier 2 supplier maps, and establish a basic emissions baseline using available data.
+        </p>
+
+        <p>
+            <strong>They establish a measurement framework.</strong> The baseline report should define the KPIs you will track going forward. This does not need to be elaborate. Five to ten metrics that you can measure consistently and that align with your regulatory and commercial obligations are more useful than fifty metrics that nobody reviews.
+        </p>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>Common Pitfalls to Avoid</h2>
+
+        <p>
+            <strong>Do not wait for perfect data.</strong> If you wait until every data point is verified and complete, you will never finish the audit. The purpose of the baseline is to establish what you know and what you do not know. Estimated data, clearly labelled as such, is better than no data at all.
+        </p>
+
+        <p>
+            <strong>Do not treat this as a marketing exercise.</strong> The baseline audit is an internal assessment tool. The moment it becomes a document designed to make the brand look good externally, it loses its diagnostic value. Be honest with yourselves. The marketing comes later, once you have something real to communicate.
+        </p>
+
+        <p>
+            <strong>Do not confuse the audit with the strategy.</strong> The baseline tells you where you are. The strategy tells you where you are going. They are sequential steps, not the same thing. Brands that try to do both simultaneously end up with a strategy built on assumptions rather than evidence.
+        </p>
+
+        <p>
+            <strong>Do not outsource the entire process to a third party without internal engagement.</strong> An external consultant can add structure and expertise, but the data lives inside your organisation. If the people who run your supply chain, manage your marketing, and oversee your operations are not involved in the audit, the results will be incomplete.
+        </p>
+
+        <!-- ═══════════════════════════════════════ -->
+        <h2>The Business Case for Starting Now</h2>
+
+        <p>
+            A baseline audit is a relatively modest investment of time and resources. The cost of not doing one is significantly higher.
+        </p>
+
+        <p>
+            Without a baseline, you cannot set credible targets. Without credible targets, you cannot produce a strategy that will satisfy investors, retail partners, or regulators. Without a documented starting point, you cannot measure progress, which means you cannot demonstrate improvement to anyone who asks.
+        </p>
+
+        <p>
+            The brands that are best positioned for the regulatory and commercial changes coming in 2026 and beyond are not the ones with the most ambitious sustainability claims. They are the ones that know exactly where they stand, have documented evidence of that position, and have a clear plan for what to do next. That starts with a baseline audit.
+        </p>
+
+        <!-- CTA -->
+        <div class="article-cta">
+            <h3>Need help structuring your baseline audit?</h3>
+            <p>
+                Woodlane Advisory helps fashion brands assess their current sustainability position, identify gaps, and build practical roadmaps. Start with a conversation.
+            </p>
+            <a href="mailto:julia@woodlaneadvisory.com" class="cta-button">Book a Call</a>
+        </div>
+
+    </article>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="https://woodlaneadvisory.com" class="footer-logo">Woodlane Advisory</a>
+        <ul class="footer-links">
+            <li><a href="https://woodlaneadvisory.com/#services">Services</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="https://woodlaneadvisory.com/#about">About</a></li>
+            <li><a href="https://www.linkedin.com/company/woodlane-advisory" target="_blank">LinkedIn</a></li>
+        </ul>
+        <span>&copy; 2026 woodlaneadvisory.com</span>
+    </footer>
+
+</body>
+</html>
